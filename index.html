@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Encuesta de Satisfacción – XX Correpatina</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <div class="survey-container">
+    <h1>XX Correpatina Platja de Xeraco</h1>
+    <p>Gracias por participar. Tu opinión nos ayuda a mejorar futuras ediciones.</p>
+
+    <!-- Sustituye TU_ENDPOINT_FORMSPREE con el que te dé Formspree -->
+    <form action="https://formspree.io/f/xkgzkvle" method="POST">
+     <input type="hidden" name="_redirect" value="https://clubcox.github.io/gracias.html">
+
+      <fieldset>
+        <legend>Datos personales</legend>
+        <label>Nombre (opcional)</label>
+        <input type="text" name="nombre" placeholder="Tu nombre" />
+
+        <label>Email (opcional)</label>
+        <input type="email" name="email" placeholder="Tu correo" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Valoración general</legend>
+
+        <label>¿Cómo calificarías tu satisfacción general?</label>
+        <select name="satisfaccion" required>
+          <option value="">Selecciona…</option>
+          <option>Muy satisfecha/o</option>
+          <option>Satisfecha/o</option>
+          <option>Neutral</option>
+          <option>Insatisfecha/o</option>
+          <option>Muy insatisfecha/o</option>
+        </select>
+
+        <label>Organización</label>
+        <select name="organizacion" required>
+          <option value="">Selecciona…</option>
+          <option>Excelente</option>
+          <option>Buena</option>
+          <option>Aceptable</option>
+          <option>Mejorable</option>
+          <option>Mala</option>
+        </select>
+
+        <label>Recorrido</label>
+        <select name="recorrido" required>
+          <option value="">Selecciona…</option>
+          <option>Muy bueno</option>
+          <option>Bueno</option>
+          <option>Regular</option>
+          <option>Malo</option>
+        </select>
+
+        <label>Señalización</label>
+        <select name="senalizacion" required>
+          <option value="">Selecciona…</option>
+          <option>Muy clara</option>
+          <option>Clara</option>
+          <option>Regular</option>
+          <option>Poco clara</option>
+        </select>
+
+        <label>Ambiente y animación</label>
+        <select name="ambiente" required>
+          <option value="">Selecciona…</option>
+          <option>Excelente</option>
+          <option>Buena</option>
+          <option>Normal</option>
+          <option>Pobre</option>
+        </select>
+
+        <label>Avituallamiento</label>
+        <select name="avituallamiento" required>
+          <option value="">Selecciona…</option>
+          <option>Muy bueno</option>
+          <option>Bueno</option>
+          <option>Regular</option>
+          <option>Malo</option>
+        </select>
+
+        <label>Seguridad</label>
+        <select name="seguridad" required>
+          <option value="">Selecciona…</option>
+          <option>Excelente</option>
+          <option>Buena</option>
+          <option>Aceptable</option>
+          <option>Mejorable</option>
+          <option>Mala</option>
+        </select>
+
+        <label>Relación calidad-precio</label>
+        <select name="calidad_precio" required>
+          <option value="">Selecciona…</option>
+          <option>Excelente</option>
+          <option>Buena</option>
+          <option>Aceptable</option>
+          <option>Mala</option>
+        </select>
+
+        <label>¿Recomendarías este evento?</label>
+        <select name="recomendacion" required>
+          <option value="">Selecciona…</option>
+          <option>Sí</option>
+          <option>No</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Comentarios</legend>
+        <label>Comentarios y sugerencias</label>
+        <textarea name="comentarios" placeholder="Escribe aquí..."></textarea>
+      </fieldset>
+
+      <button type="submit">Enviar Encuesta</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>¡Gracias por tu respuesta!</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      color: white;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .progress-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: rgba(255,255,255,0.3);
+    }
+    .progress-bar {
+      height: 100%;
+      background: #fff;
+      width: 100%;
+      transition: width linear;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <h1>¡Gracias por participar!</h1>
+  <p>Hemos recibido tu encuesta correctamente. Serás redirigido en unos segundos...</p>
+
+  <script>
+    const progressBar = document.getElementById('progressBar');
+    let timeLeft = 5; // segundos
+    const totalTime = timeLeft;
+
+    const timer = setInterval(() => {
+      timeLeft--;
+      const progress = (timeLeft / totalTime) * 100;
+      progressBar.style.width = progress + '%';
+
+      if (timeLeft <= 0) {
+        clearInterval(timer);
+        window.location.href = "https://clubcox.github.io/index.html";
+      }
+    }, 1000);
+  </script>
+
+</body>
+</html>
